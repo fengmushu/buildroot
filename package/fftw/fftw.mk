@@ -26,7 +26,7 @@ endif
 
 # Generic optimisations
 ifeq ($(BR2_TOOLCHAIN_HAS_THREADS),y)
-FFTW_COMMON_CONF_OPTS += --enable-threads
+FFTW_COMMON_CONF_OPTS += --enable-threads --enable-shared
 FFTW_COMMON_CONF_OPTS += $(if $(BR2_TOOLCHAIN_HAS_OPENMP),--without,--with)-combined-threads
 else
 FFTW_COMMON_CONF_OPTS += --disable-threads
